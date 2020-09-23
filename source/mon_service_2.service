@@ -2,5 +2,7 @@
 Description=ce service cest pour quand o met un fichier dans le dossier to_decrypt, elle sexecute pour le mettre dans le mettre dans le dossier deCrypted a laidee du sscript
 
 [Service]
+Type=simple
 User=%i
-ExecStart=
+ExecStart=~/Dossier_source/script/decrypt.py start
+Restar=on-failure
