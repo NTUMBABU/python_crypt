@@ -1,9 +1,11 @@
 [Unit]
 Description= ce service cest pour quand ont met un fichier dans le dossier toCrypt elle va execute le scripte pour le mettre dans crypted
+After=network-online.target
 
 [Service]
 Type=simple
 User=%i
-ExecStart= ~/Dossier_source/script/crypt.py start
-Restar=on-failure
+ExecStart=/usr/Dossier_source/script/crypt.py start
 
+[Install]
+WantedBy=multi-user.target

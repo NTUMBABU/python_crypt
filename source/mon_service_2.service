@@ -1,8 +1,11 @@
 [Unit]
 Description=ce service cest pour quand o met un fichier dans le dossier to_decrypt, elle sexecute pour le mettre dans le mettre dans le dossier deCrypted a laidee du sscript
+After=network-online.target
 
 [Service]
 Type=simple
 User=%i
-ExecStart=~/Dossier_source/script/decrypt.py start
-Restar=on-failure
+ExecStart=/usr/Dossier_source/script/decrypt.py
+
+[Install]
+WantedBy=multi-user.target

@@ -11,8 +11,9 @@ cp ~/Dossier_source/source/mon_service.service /etc/systemd/system/
 cp ~/Dossier_source/source/mon_service_2.service /etc/systemd/system/
 
 #Activation des service
-systemctl enable mon_service.service
-systemctl enable mon_service_2.service
+sudo systemctl daemon-reload
+sudo systemctl enable mon_service.service
+sudo systemctl enable mon_service_2.service
 
 #creation de dossier
 mkdir ~/cryptoProject/
