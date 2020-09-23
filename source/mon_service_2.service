@@ -1,14 +1,6 @@
 [Unit]
-Description=Light Display Manager
-Documentation=man:lightdm(1)
-Conflicts=getty@tty7.service plymouth-quit.service
-After=systemd-user-sessions.service getty@tty7.service plymouth-quit.service
+Description=ce service cest pour quand o met un fichier dans le dossier to_decrypt, elle sexecute pour le mettre dans le mettre dans le dossier deCrypted a laidee du sscript
 
 [Service]
-# temporary safety check until all DMs are converted to correct
-# display-manager.service symlink handling
-ExecStartPre=/bin/sh -c '[ "$(basename $(cat /etc/X11/default-display-manager 2$
-ExecStart=/usr/sbin/lightdm
-Restart=always
-BusName=org.freedesktop.DisplayManager
-
+User=%i
+ExecStart=
